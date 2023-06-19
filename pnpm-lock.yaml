@@ -10,6 +10,9 @@ dependencies:
     version: 3.3.4
 
 devDependencies:
+  '@senojs/rollup-plugin-style-inject':
+    specifier: ^0.2.3
+    version: 0.2.3
   '@types/node':
     specifier: ^20.3.0
     version: 20.3.0
@@ -85,6 +88,9 @@ devDependencies:
   vite:
     specifier: ^4.3.9
     version: 4.3.9(@types/node@20.3.0)(sass@1.62.1)
+  vite-plugin-css-injected-by-js:
+    specifier: ^3.1.1
+    version: 3.1.1(vite@4.3.9)
   vue-eslint-parser:
     specifier: ^9.3.0
     version: 9.3.1(eslint@8.43.0)
@@ -736,6 +742,11 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
+    dev: true
+
+  /@senojs/rollup-plugin-style-inject@0.2.3:
+    resolution: {integrity: sha512-3/spt7JG2iHMW1YdtFbDafWa4IYNkJ99tibY7oDe5LXVTq2JxBpOsdRmJyCCqI5I4kBoUUYWS2yEG/FKwrLy/A==}
+    engines: {node: '>=12'}
     dev: true
 
   /@types/json-schema@7.0.12:
@@ -3181,6 +3192,14 @@ packages:
     dependencies:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
+    dev: true
+
+  /vite-plugin-css-injected-by-js@3.1.1(vite@4.3.9):
+    resolution: {integrity: sha512-mwrFvEEy0TuH8Ul0cb2HgjmNboQ/JnEFy+kHCWqAJph3ikMOiIuyYVdx0JO4nEIWJyzSnc4TTdmoTulsikvJEg==}
+    peerDependencies:
+      vite: '>2.0.0-0 || 4.3.9'
+    dependencies:
+      vite: 4.3.9(@types/node@20.3.0)(sass@1.62.1)
     dev: true
 
   /vite@4.3.9(@types/node@20.3.0)(sass@1.62.1):

@@ -3,6 +3,7 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import vueSetupExtend from 'unplugin-vue-setup-extend-plus/vite';
+import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
 
 export default defineConfig((): UserConfig => {
   return {
@@ -23,11 +24,14 @@ export default defineConfig((): UserConfig => {
       vueSetupExtend({
         /* enableAutoExpose 允许自动抛出 */
       }),
+      cssInjectedByJsPlugin(),
     ],
     build: {
       outDir: 'dist',
       lib: {
         entry: 'packages/index.ts',
+        name: 'day-night-switcher',
+        fileName: (format) => `index.${format}.js`,
       },
       rollupOptions: {
         // 确保外部化处理那些你不想打包进库的依赖
