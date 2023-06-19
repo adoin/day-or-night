@@ -53,7 +53,8 @@
   },
   "files": [
     "dist",
-    "packages"
+    "packages",
+    "index.ts"
   ],
   "license": "MIT",
   "engines": {

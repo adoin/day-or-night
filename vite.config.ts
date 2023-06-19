@@ -1,9 +1,9 @@
-import type { UserConfig } from 'vite'
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import vueJsx from '@vitejs/plugin-vue-jsx'
-import vueSetupExtend from 'unplugin-vue-setup-extend-plus/vite'
-import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
+import type { UserConfig } from 'vite';
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
+import vueSetupExtend from 'unplugin-vue-setup-extend-plus/vite';
+import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
 
 export default defineConfig((): UserConfig => {
   return {
@@ -29,7 +29,7 @@ export default defineConfig((): UserConfig => {
     build: {
       outDir: 'dist',
       lib: {
-        entry: 'packages/index.ts',
+        entry: 'index.ts',
         name: 'day-night-switcher',
         fileName: (format) => `index.${format}.js`,
       },
@@ -44,5 +44,5 @@ export default defineConfig((): UserConfig => {
         },
       },
     },
-  }
-})
+  };
+});
