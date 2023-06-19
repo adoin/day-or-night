@@ -27,6 +27,7 @@
     },
   },
   "include": [
+    "index.ts",
     "examples/main.ts",
     "packages/*.tsx",
     "packages/*.vue",
