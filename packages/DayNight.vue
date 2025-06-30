@@ -18,15 +18,15 @@
         </span>
       </span>
       <span class="clouds clouds2">
-        <span v-for="ind in 5" :class="`cloud cloud${ind + 1}`" :key="ind + 'cloud'"></span>
+        <span v-for="ind in 5" :class="`cloud cloud${ind + 1}`" :key="ind + '_cloud'"></span>
       </span>
       <span class="night-stars">
-        <span v-for="ind in 9" :class="`star star${ind + 1}`" :key="ind + 'star'">
+        <span v-for="ind in 9" :class="`star star${ind + 1}`" :key="ind + '_star'">
           <Star />
         </span>
       </span>
-      <span class="rocketBox">
-        <span class="rocketInner">
+      <span class="rocket-box">
+        <span class="rocket-inner">
           <Rocket />
         </span>
       </span>
@@ -663,7 +663,7 @@
     }
   }
 
-  .rocketBox {
+  .rocket-box {
     transition: all $time * 1.3 ease-in-out;
     transition-delay: $time * 0.1;
     display: inline-block;
@@ -673,7 +673,7 @@
     left: 61%;
     opacity: 100%;
 
-    .rocketInner {
+    .rocket-inner {
       display: inline-block;
       position: absolute;
       width: 100%;
@@ -737,7 +737,7 @@
       transition-delay: $time * 0.7;
     }
 
-    .rocketBox {
+    .rocket-box {
       top: -24%;
       left: -32%;
       transform: scale(0.6);
@@ -770,8 +770,8 @@
         transform: rotateY(90deg);
       }
 
-      .rocketBox {
-        .rocketInner {
+      .rocket-box {
+        .rocket-inner {
           transform: translate(-6px, -3px);
         }
       }
